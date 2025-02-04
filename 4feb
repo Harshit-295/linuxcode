@@ -1,0 +1,11 @@
+/// this is code for finding the word in the linux in another file
+
+echo "Enter word:"
+read word
+for i in $(cat name.txt); do
+    if [[ "$i" == "$word" ]]; then
+        echo "present"
+        exit 0
+    fi
+done
+echo "not present"
